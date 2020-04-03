@@ -13,7 +13,6 @@ module.exports = (app) => {
 
     app.use('/user', userRoutes)
 
-
     return app;
 }
 
