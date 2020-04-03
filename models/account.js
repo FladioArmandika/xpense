@@ -1,7 +1,7 @@
 const mongoose  = require('mongoose')
 const Schema    = mongoose.Schema
 
-const TransactionSchema = new Schema({
+const AccountSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
@@ -17,4 +17,4 @@ const TransactionSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('Transaction', TransactionSchema)
+module.exports = mongoose.model('Account', AccountSchema)
