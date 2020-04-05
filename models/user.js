@@ -15,10 +15,14 @@ const UserSchema = new Schema({
         type: String,
         required: true,
     },
+    gender: {
+        type: String,
+        enum: ['male','female']
+    },
+    phone: {type: String},
+    marital_status: {type: String},
+    job: {type: String},
+    city: {type: String},
 })
-
-// UserSchema.pre('save', function(next) => {
-    
-// })
 
 module.exports = mongoose.model('User', UserSchema)

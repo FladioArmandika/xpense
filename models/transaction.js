@@ -10,19 +10,35 @@ const TransactionSchema = new Schema({
         type: Number,
     },
     category: {
-        type: String,
+        type: Schema.Types.ObjectId,
+        ref: 'Category'
     },
     type: {
         type: String,
+        enum: [
+            'income',
+            'outcome',
+            'transfer'
+        ]
     },
     transfer_to: {
         type: String,
+    },
+    transfer_from: {
+        type: String,
+    },
+    bank_account: {
+        type: Schema.Types.ObjectId,
+        ref: 'BankAccount'
     },
     title: {
         type: String,
     },
     note: {
         type: String,
+    },
+    date: {
+        type: Schema.Types.Date
     }
 })
 

@@ -6,9 +6,19 @@ const AccountInfoSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    balance: {
-        type: Number
-    },
+    bank: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'BankAccount'
+        }
+    ],
+    balance: {type: Number},
+    cashflow: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'CashFlow'
+        }
+    ]
 })
 
 module.exports = mongoose.model('AccountInfo', AccountInfoSchema)
