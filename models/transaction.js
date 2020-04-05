@@ -12,6 +12,15 @@ const TransactionSchema = new Schema({
     category: {
         type: String,
     },
+    type: {
+        type: String,
+    },
+    transfer_to: {
+        type: String,
+    },
+    title: {
+        type: String,
+    },
     note: {
         type: String,
     }
